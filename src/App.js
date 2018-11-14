@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import redhatlogo from './images/redhatlogo.png';
 import './App.css';
+import { Card, CardHeader, CardBody, CardFooter } from '@patternfly/react-core';
+import { Gallery, GalleryItem } from '@patternfly/react-core';
+import { Page, PageHeader, PageSidebar, PageSection, PageSectionVariants } from '@patternfly/react-core';
+import { Nav, NavList, NavItem, NavVariants } from '@patternfly/react-core';
 
 class App extends Component {
   render() {
@@ -11,49 +15,60 @@ class App extends Component {
           <img src={redhatlogo} alt="Red Hat logo" className="redHatLogo"/>
         </header>
         <div className="mainSection">
-          <div className="nav">
-            <ul>
-              <div>Section One</div>
-              <li>Link One</li>
-              <li>Link Two</li>
-              <li>Link Three</li>
-              <li>Link Four</li>
-            </ul>
-
-            <ul>
-              <div>Section Two</div>
-              <li>Link One</li>
-              <li>Link Two</li>
-              <li>Link Three</li>
-              <li>Link Four</li>
-            </ul>
-          </div>
-        <div className="cardParent">
-          <div className="cardRow">
-            <div className="card">I am a card</div>
-            <div className="card">I am a card</div>
-            <div className="card">I am a card</div>
-          </div>
-          <div className="cardRow">
-            <div className="card">I am a card</div>
-            <div className="card">I am a card</div>
-            <div className="card">I am a card</div>
-          </div>
-          <div className="cardRow">
-            <div className="card">I am a card</div>
-            <div className="card">I am a card</div>
-            <div className="card">I am a card</div>
-          </div>
-          <div className="cardRow">
-            <div className="card">I am a card</div>
-            <div className="card">I am a card</div>
-            <div className="card">I am a card</div>
-          </div>
-        </div>
-        </div>
-      </div>
-    );
-  }
+          <Nav>
+            <NavList>
+              <div>Section 1</div>
+              <NavItem>Title 1
+	      </NavItem>
+              <NavItem>Title 2
+	      </NavItem>
+              <NavItem>Title 3
+	      </NavItem>
+              <NavItem>Title 4
+	      </NavItem>
+            </NavList>
+            <NavList>
+              <div>Section 2</div>
+              <NavItem>Title 1
+	      </NavItem>
+              <NavItem>Title 2
+	      </NavItem>
+              <NavItem>Title 3
+	      </NavItem>
+              <NavItem>Title 4
+	      </NavItem>
+            </NavList>
+          </Nav>
+         
+	 <Gallery gutter='md'>
+	 	<GalleryItem>
+	    		<Card>
+			<CardBody>Hello
+				<CardHeader>Hello World
+				</CardHeader>
+			</CardBody>
+			</Card>
+		</GalleryItem>
+		<GalleryItem>
+                	<Card><CardBody>Hello</CardBody></Card>
+		</GalleryItem>
+		<GalleryItem>
+			<Card><CardBody>Hello</CardBody></Card>
+		</GalleryItem>
+		<GalleryItem>
+			<Card><CardBody>Hello</CardBody></Card>
+		</GalleryItem>
+		<GalleryItem>
+			<Card><CardBody>Hello</CardBody></Card>
+		</GalleryItem>                                 
+		<GalleryItem>
+			<Card><CardBody>Hello</CardBody></Card>
+		</GalleryItem>                                 
+	</Gallery>
+	</div>
+	</div>
+);
+}
 }
 
 export default App;
